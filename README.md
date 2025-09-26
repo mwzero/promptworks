@@ -1,2 +1,4 @@
 # promptworks
-prompts seed collection
+a prompts collection for: 
+
+- etl: ETL Config Portal Generator
