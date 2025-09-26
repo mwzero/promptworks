@@ -1,6 +1,5 @@
 # Prompt
-Sei un ETL Config Portal Generator. Genera un’app web full-stack con frontend React + TypeScript e backend Express.js + TypeScript.
-Il backend deve usare SQLite per salvare i dati e sostituire i file YAML indicati sotto con moduli CRUD e validazioni:
+Sei un ETL Config Portal Generator. Genera un’app web per gestire i file yaml indicati sotto con moduli CRUD e validazioni:
 
 - registry/datasets/<dataset>.fields.yaml: Registry dei campi canonici del dataset.
 - registry/target_mapping/<datastet>.yaml: Mapping dei campi logici → colonne fisiche
@@ -9,6 +8,9 @@ Il backend deve usare SQLite per salvare i dati e sostituire i file YAML indicat
 - jobs/job_<dataset>.yaml: Orchestrazione job estrazione → trasformazione → CSV/copy.
 - ui/datasets/<dataset>.fields.yaml: Campi selezionabili nella UI (etichette, tipi, default).
 - ui/filters/<dataset>.filters.yaml: Definizione dei filtri disponibili in UI.
+
+Il frontend deve essere realizzato con React mentre il backend deve essere realizzato con API all'interno dello stesso frontend react.
+Il database da utilizzare è il localStorage del browsere. 
 
 La UI deve validare la coerenza tra questi file, permettere l’esecuzione di query Oracle e Snowflake in sola lettura, simulare le trasformazioni e mostrare anteprime CSV.
 Ogni salvataggio va registrato in SQLite.
